@@ -1,0 +1,32 @@
+@base = http://localhost:5082
+@ticketId = SUBSTITUA-PELO-ID-RETORNADO
+
+### Abrir chamado
+POST {{base}}/api/tickets
+Content-Type: application/json
+
+{"title":"Impressora sem conexão","description":"Não responde na rede.","priority":"High"}
+
+### Iniciar atendimento
+PATCH {{base}}/api/tickets/{{ticketId}}/status
+Content-Type: application/json
+
+{"status":"InProgress"}
+
+### Comentar
+POST {{base}}/api/tickets/{{ticketId}}/comments
+Content-Type: application/json
+
+{"message":"Verificando rede."}
+
+### Resolver
+PATCH {{base}}/api/tickets/{{ticketId}}/status
+Content-Type: application/json
+
+{"status":"Resolved"}
+
+### Histórico
+GET {{base}}/api/tickets/{{ticketId}}/history
+
+### Filtrar
+GET {{base}}/api/tickets?status=Resolved
