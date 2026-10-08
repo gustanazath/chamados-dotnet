@@ -2,7 +2,7 @@
 
 API REST de chamados de suporte para portfólio, em C# com ASP.NET Core 10, Entity Framework Core e SQLite.
 
-**Status:** projeto demonstrativo, validado localmente. Não há implantação pública nem clientes reais em produção. Construído com assistência de IA; o código está disponível para estudo, revisão e evolução.
+**Status:** projeto demonstrativo, validado localmente. Não há implantação pública nem clientes reais em produção. o código está disponível para estudo, revisão e evolução.
 
 ## O que resolve
 
